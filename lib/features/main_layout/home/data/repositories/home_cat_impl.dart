@@ -3,7 +3,8 @@ import 'package:e_commerce/core/exceptions/failuers.dart';
 import 'package:e_commerce/features/main_layout/home/data/data_sources/remote/home_cat_ds.dart';
 import 'package:e_commerce/features/main_layout/home/data/model/home_cat_model.dart';
 import 'package:e_commerce/features/main_layout/home/domain/repositories/home_repo.dart';
-
+import 'package:injectable/injectable.dart';
+@Injectable(as: HomeRepository)
 class HomeCategoryImpl implements HomeRepository {
   HomeCategoryDS homeCategoryDS;
 

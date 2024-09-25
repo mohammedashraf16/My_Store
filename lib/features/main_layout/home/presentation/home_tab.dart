@@ -1,9 +1,6 @@
 import 'dart:async';
-import 'package:e_commerce/core/api/api_manager.dart';
 import 'package:e_commerce/core/utils/assets_manager.dart';
-import 'package:e_commerce/features/main_layout/home/data/data_sources/remote/home_cat_ds_impl.dart';
-import 'package:e_commerce/features/main_layout/home/data/repositories/home_cat_impl.dart';
-import 'package:e_commerce/features/main_layout/home/domain/use_cases/get_home_cat_use_case.dart';
+import 'package:e_commerce/di/di.dart';
 import 'package:e_commerce/features/main_layout/home/presentation/bloc/home_category_bloc.dart';
 import 'package:e_commerce/features/main_layout/home/presentation/widgets/custom_category_widget.dart';
 import 'package:flutter/material.dart';
@@ -54,9 +51,7 @@ class _HomeTabState extends State<HomeTab> {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) =>
-      HomeCategoryBloc(GetHomeCategoryUseCase(
-        HomeCategoryImpl(HomeCategoryDSImpl(ApiManager())),
-      ))
+      getIt<HomeCategoryBloc>()
         ..add(GetHomeCategoryEvent()),
       child: BlocConsumer<HomeCategoryBloc, HomeCategoryState>(
         listener: (context, state) {

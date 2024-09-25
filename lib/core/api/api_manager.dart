@@ -4,7 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
-@singleton
+@lazySingleton
 class ApiManager {
   late Dio dio;
 

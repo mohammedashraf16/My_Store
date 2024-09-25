@@ -2,6 +2,7 @@ import 'package:e_commerce/config/routes_manager/route_generator.dart';
 import 'package:e_commerce/config/routes_manager/routes.dart';
 import 'package:e_commerce/core/cache/shared_pref.dart';
 import 'package:e_commerce/core/utils/observer.dart';
+import 'package:e_commerce/di/di.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -9,6 +10,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   Bloc.observer = MyBlocObserver();
+  configureDependencies();
   await CacheHelper.init();
   runApp( const MainApp());
 }

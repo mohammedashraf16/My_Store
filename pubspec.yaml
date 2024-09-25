@@ -65,6 +65,76 @@ flutter:
     - assets/images/
     - assets/icons/
     - assets/svg_images/
+    - lib/
+    - lib/core/
+    - lib/core/api/
+    - lib/core/cache/
+    - lib/core/utils/
+    - lib/core/utils/components/
+    - lib/core/network/
+    - lib/core/exceptions/
+    - lib/config/
+    - lib/config/routes_manager/
+    - lib/features/
+    - lib/features/auth/
+    - lib/features/auth/data/
+    - lib/features/auth/data/model/
+    - lib/features/auth/data/repository/
+    - lib/features/auth/data/data_source/
+    - lib/features/auth/data/data_source/local/
+    - lib/features/auth/data/data_source/remote/
+    - lib/features/auth/domain/
+    - lib/features/auth/domain/entity/
+    - lib/features/auth/domain/use_cases/
+    - lib/features/auth/domain/repository/
+    - lib/features/auth/presentation/
+    - lib/features/auth/presentation/bloc/
+    - lib/features/auth/presentation/screens/
+    - lib/features/auth/presentation/screens/sign_in/
+    - lib/features/auth/presentation/screens/sign_up/
+    - lib/features/cart/
+    - lib/features/cart/screens/
+    - lib/features/cart/widgets/
+    - lib/features/main_layout/
+    - lib/features/main_layout/home/
+    - lib/features/main_layout/home/data/
+    - lib/features/main_layout/home/data/model/
+    - lib/features/main_layout/home/data/data_sources/
+    - lib/features/main_layout/home/data/data_sources/remote/
+    - lib/features/main_layout/home/data/repositories/
+    - lib/features/main_layout/home/domain/
+    - lib/features/main_layout/home/domain/entity/
+    - lib/features/main_layout/home/domain/use_cases/
+    - lib/features/main_layout/home/domain/repositories/
+    - lib/features/main_layout/home/presentation/
+    - lib/features/main_layout/home/presentation/bloc/
+    - lib/features/main_layout/home/presentation/widgets/
+    - lib/features/main_layout/favourite/
+    - lib/features/main_layout/favourite/presentation/
+    - lib/features/main_layout/favourite/presentation/widgets/
+    - lib/features/main_layout/categories/
+    - lib/features/main_layout/categories/data/
+    - lib/features/main_layout/categories/data/models/
+    - lib/features/main_layout/categories/data/repository/
+    - lib/features/main_layout/categories/data/data_sources/
+    - lib/features/main_layout/categories/data/data_sources/remote/
+    - lib/features/main_layout/categories/domain/
+    - lib/features/main_layout/categories/domain/entity/
+    - lib/features/main_layout/categories/domain/use_cases/
+    - lib/features/main_layout/categories/domain/repository/
+    - lib/features/main_layout/categories/presentation/
+    - lib/features/main_layout/categories/presentation/bloc/
+    - lib/features/main_layout/categories/presentation/widgets/
+    - lib/features/main_layout/profile_tab/
+    - lib/features/main_layout/profile_tab/presentation/
+    - lib/features/product_details/
+    - lib/features/product_details/presentation/
+    - lib/features/product_details/presentation/screen/
+    - lib/features/product_details/presentation/widgets/
+    - lib/features/products_screen/
+    - lib/features/products_screen/presentation/
+    - lib/features/products_screen/presentation/screens/
+    - lib/features/products_screen/presentation/widgets/
 
 
 
