@@ -1,11 +1,11 @@
-class CategoryModel {
+class HomeSubCategoryModel {
   int? results;
   Metadata? metadata;
   List<Data>? data;
 
-  CategoryModel({this.results, this.metadata, this.data});
+  HomeSubCategoryModel({this.results, this.metadata, this.data});
 
-  CategoryModel.fromJson(Map<String, dynamic> json) {
+  HomeSubCategoryModel.fromJson(Map<String, dynamic> json) {
     results = json['results'];
     metadata = json['metadata'] != null
         ? new Metadata.fromJson(json['metadata'])
@@ -35,15 +35,13 @@ class Metadata {
   int? currentPage;
   int? numberOfPages;
   int? limit;
-  int? nextPage;
 
-  Metadata({this.currentPage, this.numberOfPages, this.limit, this.nextPage});
+  Metadata({this.currentPage, this.numberOfPages, this.limit});
 
   Metadata.fromJson(Map<String, dynamic> json) {
     currentPage = json['currentPage'];
     numberOfPages = json['numberOfPages'];
     limit = json['limit'];
-    nextPage = json['nextPage'];
   }
 
   Map<String, dynamic> toJson() {
@@ -51,7 +49,6 @@ class Metadata {
     data['currentPage'] = this.currentPage;
     data['numberOfPages'] = this.numberOfPages;
     data['limit'] = this.limit;
-    data['nextPage'] = this.nextPage;
     return data;
   }
 }
@@ -60,7 +57,8 @@ class Data {
   String? sId;
   String? name;
   String? slug;
-  String? category;
+  String? image;
+  String? catId;
   String? createdAt;
   String? updatedAt;
 
@@ -68,7 +66,8 @@ class Data {
       {this.sId,
         this.name,
         this.slug,
-        this.category,
+        this.image,
+        this.catId,
         this.createdAt,
         this.updatedAt});
 
@@ -76,7 +75,8 @@ class Data {
     sId = json['_id'];
     name = json['name'];
     slug = json['slug'];
-    category = json['category'];
+    image = json['image'];
+    catId = json['category'];
     createdAt = json['createdAt'];
     updatedAt = json['updatedAt'];
   }
@@ -86,7 +86,7 @@ class Data {
     data['_id'] = this.sId;
     data['name'] = this.name;
     data['slug'] = this.slug;
-    data['category'] = this.category;
+    data['image'] = this.image;
     data['createdAt'] = this.createdAt;
     data['updatedAt'] = this.updatedAt;
     return data;

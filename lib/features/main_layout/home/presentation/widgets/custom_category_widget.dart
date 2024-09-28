@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:e_commerce/core/utils/color_manager.dart';
 import 'package:e_commerce/core/utils/styles_manager.dart';
-import 'package:e_commerce/features/main_layout/home/data/model/home_cat_model.dart';
+import 'package:e_commerce/features/main_layout/home/data/model/home_category_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

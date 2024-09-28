@@ -52,6 +52,7 @@ dependencies:
   get_it: ^7.7.0
   build_runner: ^2.4.12
   injectable_generator: ^2.6.2
+  freezed: ^2.5.7
 
 dev_dependencies:
   flutter_test:

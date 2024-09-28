@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:e_commerce/config/routes_manager/routes.dart';
 import 'package:e_commerce/core/utils/color_manager.dart';
 import 'package:e_commerce/core/utils/components/heart_button.dart';
@@ -69,28 +70,28 @@ class CustomProductWidget extends StatelessWidget {
                 children: [
                   // Not working with the lastest flutter version
 
-                  // CachedNetworkImage(
-                  //   imageUrl: image,
-                  //   height: height * 0.15,
-                  //   width: double.infinity,
-                  //   fit: BoxFit.cover,
-                  //   placeholder: (context, url) =>
-                  //       const Center(child: CircularProgressIndicator()),
-                  //   errorWidget: (context, url, error) => const Icon(Icons.error),
-                  // ),
-                  // Image.network(
-                  //   image,
-                  //   fit: BoxFit.cover,
-                  // ),
-                  ClipRRect(
-                    borderRadius:
-                        BorderRadius.vertical(top: Radius.circular(14.r)),
-                    child: Image.asset(
-                      image,
-                      fit: BoxFit.cover,
-                      width: width,
-                    ),
+                  CachedNetworkImage(
+                    imageUrl: image,
+                    height: height * 0.15,
+                    width: double.infinity,
+                    fit: BoxFit.cover,
+                    placeholder: (context, url) =>
+                        const Center(child: CircularProgressIndicator()),
+                    errorWidget: (context, url, error) => const Icon(Icons.error),
                   ),
+                  Image.network(
+                    image,
+                    fit: BoxFit.cover,
+                  ),
+                  // ClipRRect(
+                  //   borderRadius:
+                  //       BorderRadius.vertical(top: Radius.circular(14.r)),
+                  //   child: Image.asset(
+                  //     image,
+                  //     fit: BoxFit.cover,
+                  //     width: width,
+                  //   ),
+                  // ),
                   Positioned(
                       top: height * 0.01,
                       right: width * 0.02,
@@ -127,6 +128,7 @@ class CustomProductWidget extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
+                            overflow: TextOverflow.ellipsis,
                             "EGP $price",
                             style: getRegularStyle(
                               color: ColorManager.textColor,
@@ -134,6 +136,7 @@ class CustomProductWidget extends StatelessWidget {
                             ),
                           ),
                           Text(
+                            overflow: TextOverflow.ellipsis,
                             "$discountPercentage %",
                             style: getTextWithLine(),
                           ),
@@ -150,6 +153,7 @@ class CustomProductWidget extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
+                                overflow: TextOverflow.ellipsis,
                                 "Review ($rating)",
                                 style: getRegularStyle(
                                   color: ColorManager.textColor,

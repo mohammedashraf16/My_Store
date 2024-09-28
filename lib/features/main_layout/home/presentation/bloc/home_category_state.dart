@@ -2,7 +2,7 @@ part of 'home_category_bloc.dart';
 
 class HomeCategoryState {
   RequestState? requestState;
-  HomeCategoryModel? homeCategoryModel;
+  HomeSubCategoryModel? homeCategoryModel;
   String? errorMessage;
 
   HomeCategoryState(
@@ -10,7 +10,7 @@ class HomeCategoryState {
 
   HomeCategoryState copyWith(
       {RequestState? requestState,
-      HomeCategoryModel? homeCategoryModel,
+      HomeSubCategoryModel? homeCategoryModel,
       String? errorMessage}) {
     return HomeCategoryState(
         requestState: requestState ?? this.requestState,
